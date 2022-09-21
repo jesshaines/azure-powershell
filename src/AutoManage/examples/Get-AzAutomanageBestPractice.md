@@ -1,21 +1,26 @@
 ### Example 1: {{ Add title here }}
 ```powershell
-{{ Add code here }}
+Get-AzAutomanageBestPractice
 ```
 
 ```output
-{{ Add output here }}
+Name
+----
+AzureBestPracticesProduction
+AzureBestPracticesDevTest
 ```
 
 {{ Add description here }}
 
 ### Example 2: {{ Add title here }}
 ```powershell
-{{ Add code here }}
+Get-AzAutomanageBestPractice -Name AzureBestPracticesProduction
 ```
 
 ```output
-{{ Add output here }}
+Name
+----
+AzureBestPracticesProduction
 ```
 
 {{ Add description here }}

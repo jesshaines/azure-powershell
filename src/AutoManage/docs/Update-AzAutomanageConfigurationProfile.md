@@ -19,20 +19,6 @@ Update-AzAutomanageConfigurationProfile -Name <String> -ResourceGroupName <Strin
  [<CommonParameters>]
 ```
 
-### Update
-```
-Update-AzAutomanageConfigurationProfile -Name <String> -ResourceGroupName <String>
- -Parameter <IConfigurationProfileUpdate> [-SubscriptionId <String>] [-DefaultProfile <PSObject>] [-Confirm]
- [-WhatIf] [<CommonParameters>]
-```
-
-### UpdateViaIdentity
-```
-Update-AzAutomanageConfigurationProfile -InputObject <IAutomanageIdentity>
- -Parameter <IConfigurationProfileUpdate> [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf]
- [<CommonParameters>]
-```
-
 ### UpdateViaIdentityExpanded
 ```
 Update-AzAutomanageConfigurationProfile -InputObject <IAutomanageIdentity> [-Configuration <Hashtable>]
@@ -73,7 +59,7 @@ configuration dictionary of the configuration profile.
 
 ```yaml
 Type: System.Collections.Hashtable
-Parameter Sets: UpdateExpanded, UpdateViaIdentityExpanded
+Parameter Sets: (All)
 Aliases:
 
 Required: False
@@ -104,7 +90,7 @@ To construct, see NOTES section for INPUTOBJECT properties and create a hash tab
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.Automanage.Models.IAutomanageIdentity
-Parameter Sets: UpdateViaIdentity, UpdateViaIdentityExpanded
+Parameter Sets: UpdateViaIdentityExpanded
 Aliases:
 
 Required: True
@@ -119,7 +105,7 @@ Name of the configuration profile.
 
 ```yaml
 Type: System.String
-Parameter Sets: Update, UpdateExpanded
+Parameter Sets: UpdateExpanded
 Aliases: ConfigurationProfileName
 
 Required: True
@@ -129,29 +115,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Parameter
-Definition of the configuration profile.
-To construct, see NOTES section for PARAMETER properties and create a hash table.
-
-```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.Automanage.Models.Api20220504.IConfigurationProfileUpdate
-Parameter Sets: Update, UpdateViaIdentity
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
-
 ### -ResourceGroupName
 The name of the resource group.
 The name is case insensitive.
 
 ```yaml
 Type: System.String
-Parameter Sets: Update, UpdateExpanded
+Parameter Sets: UpdateExpanded
 Aliases:
 
 Required: True
@@ -166,7 +136,7 @@ The ID of the target subscription.
 
 ```yaml
 Type: System.String
-Parameter Sets: Update, UpdateExpanded
+Parameter Sets: UpdateExpanded
 Aliases:
 
 Required: False
@@ -181,7 +151,7 @@ The tags of the resource.
 
 ```yaml
 Type: System.Collections.Hashtable
-Parameter Sets: UpdateExpanded, UpdateViaIdentityExpanded
+Parameter Sets: (All)
 Aliases:
 
 Required: False
@@ -227,8 +197,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.Automanage.Models.Api20220504.IConfigurationProfileUpdate
-
 ### Microsoft.Azure.PowerShell.Cmdlets.Automanage.Models.IAutomanageIdentity
 
 ## OUTPUTS
@@ -256,12 +224,6 @@ To create the parameters described below, construct a hash table containing the 
   - `[SubscriptionId <String>]`: The ID of the target subscription.
   - `[VMName <String>]`: The name of the virtual machine.
   - `[VersionName <String>]`: The Automanage best practice version name.
-
-`PARAMETER <IConfigurationProfileUpdate>`: Definition of the configuration profile.
-  - `[Tag <IUpdateResourceTags>]`: The tags of the resource.
-    - `[(Any) <String>]`: This indicates any property can be added to this object.
-  - `[Configuration <IConfigurationDictionary>]`: configuration dictionary of the configuration profile.
-    - `[(Any) <Object>]`: This indicates any property can be added to this object.
 
 ## RELATED LINKS
 

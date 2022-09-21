@@ -14,11 +14,8 @@ Microsoft Azure PowerShell: Automanage cmdlets
 ### [Get-AzAutomanageBestPractice](Get-AzAutomanageBestPractice.md)
 Get information about a Automanage best practice
 
-### [Get-AzAutomanageBestPracticesVersion](Get-AzAutomanageBestPracticesVersion.md)
-Get information about a Automanage best practice version
-
 ### [Get-AzAutomanageBestPracticeVersion](Get-AzAutomanageBestPracticeVersion.md)
-Retrieve a list of Automanage best practices versions
+Get information about a Automanage best practice version
 
 ### [Get-AzAutomanageConfigurationProfile](Get-AzAutomanageConfigurationProfile.md)
 Get information about a configuration profile
@@ -79,21 +76,6 @@ Delete a configuration profile assignment
 
 ### [Remove-AzAutomanageConfigurationProfileVersion](Remove-AzAutomanageConfigurationProfileVersion.md)
 Delete a configuration profile version
-
-### [Set-AzAutomanageConfigurationProfile](Set-AzAutomanageConfigurationProfile.md)
-Creates a configuration profile
-
-### [Set-AzAutomanageConfigurationProfileAssignment](Set-AzAutomanageConfigurationProfileAssignment.md)
-Creates an association between a VM and Automanage configuration profile
-
-### [Set-AzAutomanageConfigurationProfileHciAssignment](Set-AzAutomanageConfigurationProfileHciAssignment.md)
-Creates an association between a AzureStackHCI cluster and Automanage configuration profile
-
-### [Set-AzAutomanageConfigurationProfileHcrpAssignment](Set-AzAutomanageConfigurationProfileHcrpAssignment.md)
-Creates an association between a ARC machine and Automanage configuration profile
-
-### [Set-AzAutomanageConfigurationProfileVersion](Set-AzAutomanageConfigurationProfileVersion.md)
-Creates a configuration profile version
 
 ### [Update-AzAutomanageConfigurationProfile](Update-AzAutomanageConfigurationProfile.md)
 Updates a configuration profile

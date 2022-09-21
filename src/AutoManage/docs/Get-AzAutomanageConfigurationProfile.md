@@ -43,22 +43,27 @@ Get information about a configuration profile
 
 ### Example 1: {{ Add title here }}
 ```powershell
-{{ Add code here }}
+Get-AzAutomanageConfigurationProfile
 ```
 
 ```output
-{{ Add output here }}
+Location Name                         ResourceGroupName
+-------- ----                         -----------------
+eastus   confpro-pwsh01               automangerg
+eastus   lucas-best-practices-devtest automangerg
 ```
 
 {{ Add description here }}
 
 ### Example 2: {{ Add title here }}
 ```powershell
-{{ Add code here }}
+Get-AzAutomanageConfigurationProfile -Name confpro-pwsh01 -ResourceGroupName automangerg
 ```
 
 ```output
-{{ Add output here }}
+Location Name           ResourceGroupName
+-------- ----           -----------------
+eastus   confpro-pwsh01 automangerg
 ```
 
 {{ Add description here }}

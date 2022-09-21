@@ -30,12 +30,6 @@ Get-AzAutomanageConfigurationProfileAssignment -InputObject <IAutomanageIdentity
  [<CommonParameters>]
 ```
 
-### List
-```
-Get-AzAutomanageConfigurationProfileAssignment -ResourceGroupName <String> -VMName <String>
- [-SubscriptionId <String[]>] [-DefaultProfile <PSObject>] [<CommonParameters>]
-```
-
 ### List1
 ```
 Get-AzAutomanageConfigurationProfileAssignment -ResourceGroupName <String> [-SubscriptionId <String[]>]
@@ -61,22 +55,39 @@ Get information about a configuration profile assignment
 
 ### Example 1: {{ Add title here }}
 ```powershell
-{{ Add code here }}
+Get-AzAutomanageConfigurationProfileAssignment
 ```
 
 ```output
-{{ Add output here }}
+Name    ResourceGroupName ManagedBy Status  TargetId
+----    ----------------- --------- ------  --------
+default automangerg                 Unknown /subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourceGroups/automangerg/providers/Microsoft.Compute/virtualMachines/aglinuxvm
 ```
 
 {{ Add description here }}
 
 ### Example 2: {{ Add title here }}
 ```powershell
-{{ Add code here }}
+Get-AzAutomanageConfigurationProfileAssignment -ResourceGroupName automangerg -VMName aglinuxvm
 ```
 
 ```output
-{{ Add output here }}
+Name    ResourceGroupName ManagedBy Status  TargetId
+----    ----------------- --------- ------  --------
+default automangerg                 Unknown /subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourceGroups/automangerg/providers/Microsoft.Compute/virtualMachines/aglinuxvm
+```
+
+{{ Add description here }}
+
+### Example 3: {{ Add title here }}
+```powershell
+New-AzAutomanageConfigurationProfileAssignment -ResourceGroupName automangerg -VMName aglinuxvm -ConfigurationProfile "/providers/Microsoft.Automanage/bestPractices/AzureBestPracticesProduction" | Get-AzAutomanageConfigurationProfileAssignment
+```
+
+```output
+Name    ResourceGroupName ManagedBy Status  TargetId
+----    ----------------- --------- ------  --------
+default automangerg                 Unknown /subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourceGroups/automangerg/providers/Microsoft.Compute/virtualMachines/aglinuxvm
 ```
 
 {{ Add description here }}
@@ -150,7 +161,7 @@ The name is case insensitive.
 
 ```yaml
 Type: System.String
-Parameter Sets: Get, List, List1, List3, List4
+Parameter Sets: Get, List1, List3, List4
 Aliases:
 
 Required: True
@@ -165,7 +176,7 @@ The ID of the target subscription.
 
 ```yaml
 Type: System.String[]
-Parameter Sets: Get, List, List1, List2, List3, List4
+Parameter Sets: Get, List1, List2, List3, List4
 Aliases:
 
 Required: False
@@ -180,7 +191,7 @@ The name of the virtual machine.
 
 ```yaml
 Type: System.String
-Parameter Sets: Get, List
+Parameter Sets: Get
 Aliases:
 
 Required: True

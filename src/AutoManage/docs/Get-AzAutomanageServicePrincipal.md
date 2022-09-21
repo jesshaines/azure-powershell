@@ -24,12 +24,6 @@ Get-AzAutomanageServicePrincipal -InputObject <IAutomanageIdentity> [-DefaultPro
  [<CommonParameters>]
 ```
 
-### List
-```
-Get-AzAutomanageServicePrincipal [-SubscriptionId <String[]>] [-DefaultProfile <PSObject>]
- [<CommonParameters>]
-```
-
 ## DESCRIPTION
 Get the Automanage AAD first party Application Service Principal details for the subscription id.
 
@@ -95,7 +89,7 @@ The ID of the target subscription.
 
 ```yaml
 Type: System.String[]
-Parameter Sets: Get, List
+Parameter Sets: Get
 Aliases:
 
 Required: False

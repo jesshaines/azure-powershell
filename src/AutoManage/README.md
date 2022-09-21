@@ -57,20 +57,50 @@ directive:
           }
       }
 
+  # remove cmdlets
+  - where:
+      verb: Set
+    remove: true
+
+  # remove variant
+  - where:
+      variant: ^Create$|^CreateViaIdentity$|^CreateViaIdentityExpanded$|^Update$|^UpdateViaIdentity$
+    remove: true
+
+  - where:
+      verb: Get
+      subject: ^BestPractice$|^BestPracticeVersion$
+      variant: ^GetViaIdentity$
+    remove: true
+
+  # ConfigurationProfileAssignmentName only one value is default
+  - where:
+      verb: Get
+      subject: ^ConfigurationProfileAssignment$|^ServicePrincipal$
+      variant: ^List$
+    remove: true
+
+  # rename subject
   - where:
       subject: (.*)(Profiles)(.*)
     set:
       subject: $1Profile$3
 
-  # rename parameter
   - where:
       subject: BestPracticesVersion
+    set:
+      subject: BestPracticeVersion
+
+    
+  # rename parameter
+  - where:
+      subject: BestPracticeVersion
       parameter-name: BestPracticeName
     set:
       parameter-name: Name
 
   - where:
-      subject: BestPracticesVersion
+      subject: BestPracticeVersion
       parameter-name: VersionName
     set:
       parameter-name: Version
@@ -124,5 +154,21 @@ directive:
           - ManagedBy
           - Status
           - TargetId
+  
+  - where:
+      model-name: BestPractice
+    set:
+      format-table:
+        properties:
+          - Name
+          - Type
 
+  - where:
+      model-name: ServicePrincipal
+    set:
+      format-table:
+        properties:
+          - Name
+          - AuthorizationSet
+          - ServicePrincipalId
 ```
