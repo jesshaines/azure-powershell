@@ -30,6 +30,8 @@ Undo-AzKeyVaultRemoval [-InputObject] <PSDeletedKeyVault> [-Tag <Hashtable>]
 The **Undo-AzKeyVaultRemoval** cmdlet will recover a previously deleted key vault. The
 recovered vault will be active after recovery
 
+The **Undo-AzKeyVaultRemovalManagedHSM** cmdlet will recover a previously deleted managed HSM...
+
 ## EXAMPLES
 
 ### Example 1
